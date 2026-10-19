@@ -22,14 +22,14 @@ router.get("/", getMenu);
 router.post(
     "/",
     checkAuthentication,
-    restrictTo("Admin"),upload.single("image"),
+    restrictTo("Admin"),upload.single("image_url"),
     createMenu
 );
 
 router.put(
     "/:id",
     checkAuthentication,
-    restrictTo("Admin"),upload.single("image"),
+    restrictTo("Admin"),upload.single("image_url"),
     updateMenu
 );
 
